@@ -4,7 +4,9 @@ body {
     background-color: #d090ab;
     color: #281745;
 }
-
+h1, p {
+    text-align: center;
+}
 footer {
     text-align: center;
     padding: 20px;
