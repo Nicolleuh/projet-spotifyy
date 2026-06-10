@@ -4,6 +4,13 @@ body {
     background-color: #d090ab;
     color: #281745;
 }
+
+nav {
+    text-align: center;
+    color: #f7ebf1;
+    background-color: #7e2153;
+    padding: 20px;
+}
 h1, p {
     text-align: center;
 }
