@@ -5,5 +5,12 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #311440;
-    color: #dda5bc;
 }
+
+.text-pink {
+    color: #dda5bc;
+  }
+
+.bg-pink {
+    background-color: #dda5bc;
+  }

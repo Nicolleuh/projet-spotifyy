@@ -15,7 +15,7 @@ new Chart(ctx, {
       
       title: {
         display: true,
-        text: 'Top 10 des Artistes'
+        text: 'Distribution des Genres'
       }
     },
     scales: {
