@@ -53,3 +53,11 @@ new Chart(barre, {
     }
   }
 });
+
+// Fonction pour fetch les informations de spotify
+async function fetchSpotifyData() {
+  try {
+    const response = await fetch('./data/spotify_data.json');
+    const data = await response.json();
+    return data;
+  }
