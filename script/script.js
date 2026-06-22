@@ -39,6 +39,7 @@ new Chart(barre, {
     }]
   },
   options: {
+    indexAxis: 'y',
     plugins: {
       
       title: {
