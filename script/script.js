@@ -7,7 +7,7 @@ new Chart(ctx, {
     datasets: [{
       label: '# of Votes',
       data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
+      borderWidth: 2
     }]
   },
   options: {
