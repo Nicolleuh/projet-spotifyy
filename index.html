@@ -57,7 +57,7 @@
         
         <div x-data="{ tracks: [] }"  x-init="tracks = await fetchSpotifyData()">
 
-            <div class="justify-content-center">
+            <div class="justify-content-center px-5">
                 <table class="table table-striped table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
@@ -86,7 +86,7 @@
 
     </div>
 
-    <div class="container">
+    <div class="container mw-100 px-5">
         <div x-data="{ tracks: [] }"  x-init="tracks = await fetchSpotifyData()">
 
             <div class="row justify-content-center">
@@ -95,19 +95,46 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
-                <template x-for="track in tracks" :key="track.id">
-                    <tr>
-                        <td x-text="track.name"></td>
-                        <td x-text="track.artists[0].name"></td>
-                        <td x-text="track.album.name"></td>
-                    </tr>
-                </template>
+    <div class="row g-3">
+    
+        <template x-for="track in tracks" :key="track.id">
+    
+            <div class="col-md-2">
+    
+                <div class="card h-100">
+    
+                    <img
+                        :src="track.album.images[1].url"
+                        class="card-img-top"
+                        alt="Pochette album">
+    
+                    <div class="card-body">
+    
+                        <h5 class="card-title"
+                            x-text="track.album.name">
+                        </h5>
+    
+                        <p class="card-text">
+                            <strong>Artiste :</strong>
+                            <span x-text="track.artists[0].name"></span>
+                        </p>
+    
+                        <p class="card-text">
+                            <strong>Date de sortie :</strong>
+                            <span x-text="track.album.release_date"></span>
+                        </p>
+    
+                        <p class="card-text">
+                            <strong>Nombre de titres :</strong>
+                            <span x-text="track.album.total_tracks"></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </template>
     </div>
 
-    <footer class="text-pink">
+    <footer class="bg-dark text-pink justify-content-center p-4">
         <p>© 2026, Lebigot Nicole - Projet étudiant MMI</p>
     </footer>
 
