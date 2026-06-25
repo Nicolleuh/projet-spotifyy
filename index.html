@@ -55,7 +55,14 @@
 
         <br>
         
-        <div x-data="{ tracks: [] }"  x-init="tracks = await fetchSpotifyData()">
+        <div
+            x-data="{
+                tracks: [],
+                selectedTrack: null,
+                showModal: false
+            }"
+            x-init="tracks = await fetchSpotifyData()"
+        >
 
             <div class="justify-content-center px-5">
                 <table class="table table-striped table-bordered table-hover">
@@ -75,7 +82,7 @@
                                 <td x-text="track.album.name"></td>
                                 <td>
                                     <x-data
-                                    <button class="btn btn-dark">ⓘ Détails</button>
+                                    <button class="btn btn-dark" @click=""selectedTrack = track; showModal = true;>ⓘ Détails</button>
                                 </td>
                             </tr>
                         </template>
