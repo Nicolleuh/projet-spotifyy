@@ -46,7 +46,7 @@ async function init() {
       plugins: {
         title: {
           display: true,
-          text: 'Top morceaux par popularité'
+          text: 'Distribution des genres musicaux'
         }
       }
     }
@@ -65,13 +65,14 @@ async function init() {
       }]
     },
     options: {
+      indexAxis: 'y',
       scales: {
         y: { beginAtZero: true }
       },
       plugins: {
         title: {
           display: true,
-          text: 'Top morceaux par popularité'
+          text: 'Top 10 des artistes (nombre de morceaux)'
         }
       }
     }

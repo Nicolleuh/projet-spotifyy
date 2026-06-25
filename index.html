@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script> <!-- Alpine.js -->
 
 </head>
+
 <body>
-    <div class="container">
+    <div class="container mw-100">
         <div class="bg-pink">
             <h1>Spotheehee-fy by Nicole</h1>
             <p>Bienvenue sur mon application Spotify !</p>
@@ -27,20 +29,18 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 col-sm-3">
-                    <h2>Liste des Morceaux</h2> <!-- faire avec chart.js ? -->
-                </div>
-                </h2>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-6 col-sm-3">
-                    <canvas id="myPieChart"></canvas>
+                <div>
+                    <h2 class="bg-dark text-light">Distribution des Genres</h2>
+                    <div class="col-6 col-sm-3">
+                        <canvas class="border" id="myPieChart"></canvas>
+                    </div>
                 </div>
-                <div class="col-6 col-sm-3"> <!-- voir comment faire apparaitre la bordure pour chart.js -->
-                    <canvas id="myBarChart"></canvas>
+                <div>
+                    <h2 class="bg-dark text-light">Top 10 des Artistes</h2>
+                    <div class="col-6 col-sm-3">
+                        <canvas class="border" id="myBarChart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,7 +75,10 @@
                                 <td x-text="track.name"></td>
                                 <td x-text="track.artists[0].name"></td>
                                 <td x-text="track.album.name"></td>
-                                <td><button class="btn btn-dark">ⓘ Détails</button></td>
+                                <td>
+                                    <x-data
+                                    <button class="btn btn-dark">ⓘ Détails</button>
+                                </td>
                             </tr>
                         </template>
                     </tbody>
@@ -84,6 +87,14 @@
         </div>
 
     </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 col-sm-3">
+                    <h2>Albums Populaires</h2>
+                </div>
+            </div>
+        </div>
 
     
     <footer class="text-pink">
