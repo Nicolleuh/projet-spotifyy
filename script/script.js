@@ -28,6 +28,18 @@ async function init() {
   // On extrait les noms et les popularités
   const labels = topTracks.map(track => track.name);
   const popularities = topTracks.map(track => track.popularity);
+  const genreCounts = {};
+  
+  tracks.forEach(track => {
+  
+    track.artists[0].genres.forEach(genre => {
+      genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+    });
+  
+  });
+  
+  const genreLabels = Object.keys(genreCounts);
+  const genreValues = Object.values(genreCounts);
 
 
   // Graphique en camembert
@@ -35,10 +47,10 @@ async function init() {
   new Chart(ctxPie, {
     type: 'pie',
     data: {
-      labels: labels,
+      labels: genreLabels,
       datasets: [{
         label: 'Popularité',
-        data: popularities,
+        data: genreValues,
         borderWidth: 1
       }]
     },
